@@ -2,31 +2,31 @@ const initialState = {
 	isLoading: false,
 	data: [
 		{
-			content: 'Hello everyone',
+			feedback: 'Hello everyone',
 			date: '20 Mar 15:30',
 			avatar: '//lorempixel.com/100/100',
 			name: 'Elis'
 		},
 		{
-			content: 'Hi',
+			feedback: 'Hi',
 			date: '19 Mar 23:30',
 			avatar: '//lorempixel.com/100/100',
 			name: 'Someone'
 		},
 		{
-			content: 'I\'m boring',
+			feedback: 'I\'m boring',
 			date: '19 Mar 23:00',
 			avatar: '//lorempixel.com/100/100',
 			name: 'David'
 		},
 		{
-			content: 'Ooops',
+			feedback: 'Ooops',
 			date: '18 Mar 00:01',
 			avatar: '//lorempixel.com/100/100',
 			name: 'Harry'
 		},
 		{
-			content: 'OMG',
+			feedback: 'OMG',
 			date: '17 Mar 10:22',
 			avatar: '//lorempixel.com/100/100',
 			name: 'Lisa'
@@ -60,6 +60,22 @@ const feedbackReducer = function (state = initialState, action) {
 
 			return {
 				...state,
+				isLoading: false
+			};
+
+		case 'ADD_PRESSED':
+			return {
+				...state,
+				isLoading: true
+			};
+
+		case 'ITEM_ADDED':
+			state.data.unshift(payload);
+			let addCount = state.showCount+1;
+
+			return {
+				...state,
+				showCount: addCount,
 				isLoading: false
 			};
 

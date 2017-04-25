@@ -27,7 +27,7 @@ class App extends Component {
 		<div>
 			<div className="row">
 				<div className="col s12 blue lighten-1 white-text">
-					<h4 className="center-align">Hello, shit!</h4>
+					<h4 className="center-align">Hello! Welcome to the feedbacks'</h4>
 				</div>
 			</div>
 			<div className="container">

@@ -7,6 +7,18 @@ const FeedbackActions = {
 				dispatch({type: "TIME_IS_ENDED"})
 			}, 2000)
 		}
+	},
+	userPressedAddBtn(obj) {
+
+		return dispatch => {
+			dispatch({type: "ADD_PRESSED"});
+			setTimeout(()=>{
+				dispatch({
+					type: "ITEM_ADDED",
+					payload: obj
+				});
+			},3000)
+		}
 	}
 };
 

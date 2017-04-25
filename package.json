@@ -2,6 +2,7 @@
   "name": "feedback",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://gultyaev.github.io/react-module-work/",
   "dependencies": {
     "gh-pages": "^0.12.0",
     "history": "^4.6.1",
@@ -9,6 +10,7 @@
     "material-icons": "^0.1.0",
     "materialize-css": "^0.98.2",
     "react": "^15.5.4",
+    "react-addons-update": "^15.5.2",
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.4",
     "react-router": "^4.1.1",
@@ -63,7 +65,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "jest": {
     "collectCoverageFrom": [
