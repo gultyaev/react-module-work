@@ -46,6 +46,18 @@ const feedbackReducer = function (state = initialState, action) {
 			};
 
 		case 'TIME_IS_ENDED':
+			let oldCount = state.showCount,
+				newCount = oldCount + 2,
+				count = null;
+
+			if (newCount < state.data.length) {
+				count = newCount;
+			} else {
+				count = state.data.length;
+			}
+
+			fb.showCount = count;
+
 			return {
 				...state,
 				isLoading: false

@@ -10,22 +10,6 @@ import Column from '../UI/Form/Column';
 
 class App extends Component {
 
-	componentWillReceiveProps() {
-		const { fb } = this.props;
-
-		let oldCount = fb.showCount,
-			newCount = oldCount + 2,
-			count = null;
-
-		if (newCount < fb.data.length) {
-			count = newCount;
-		} else {
-			count = fb.data.length;
-		}
-
-		fb.showCount = count;
-	}
-
 	onClickMore = () => {
 		const { dispatch } = this.props;
 		dispatch(FeedbackActions.userPressedMore());
@@ -34,10 +18,10 @@ class App extends Component {
   render() {
   	const { fb } = this.props;
 
-  	console.log('----props');
-  	console.log(this.props);
-  	console.log('----fb');
-  	console.log(fb);
+  	// console.log('----props');
+  	// console.log(this.props);
+  	// console.log('----fb');
+  	// console.log(fb);
 
     return (
 		<div>
