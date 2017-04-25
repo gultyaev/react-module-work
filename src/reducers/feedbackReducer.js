@@ -56,7 +56,7 @@ const feedbackReducer = function (state = initialState, action) {
 				count = state.data.length;
 			}
 
-			fb.showCount = count;
+			state.showCount = count;
 
 			return {
 				...state,
